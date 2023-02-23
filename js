@@ -43,6 +43,29 @@ console.log(newSorted(names))
    console.log(person)
 
 
+//5
+ function findNumbersByLength(numbers, length) {
+     let count = 0;
+  
+     for (let i = 0; i < numbers.length; i++) {
+       if (numbers[i].toString().length === length) {
+         count++;
+       }
+     }
+       return count;
+   }
+  
+   const numbers = [1,2,55,3,100, 333, 9999];
+   const twoDigitCount = findNumbersByLength(numbers, 2);
+   const threeDigitCount = findNumbersByLength(numbers, 3);
+   const fourDigitCount = findNumbersByLength(numbers, 4);
+  
+   console.log(twoDigitCount);
+   console.log(threeDigitCount);
+   console.log(fourDigitCount);
+
+
+
 //7
  const num = [3,7,9]
  function addItem(){
