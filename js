@@ -1,3 +1,29 @@
+//1
+ function removeDuplicates(array) {
+     return Array.from(new Set(array));
+   }
+
+ const array = [5,3,4,5,6,7,3]
+ const newArray = removeDuplicates(array)
+ console.log(newArray)
+
+
+//2
+ function createArray(start, end) {
+     const range = [];
+  
+     for (let i = start; i <= end; i++) {
+       range.push(i);
+     }
+  
+     return range;
+  }
+
+ const arr = createArray(2,10)
+ console.log(arr)
+
+
+
 // 3
 const newSorted = (names) => names.replace(/\s+/g, '').split(',').sort().join(', ')
 const names = "Alex,    Orysia, Misha,    Ira     , Paul";
@@ -25,3 +51,11 @@ console.log(newSorted(names))
  num.unshift(4,3,9)
  num.push(8,7,6)
  console.log(num)
+ 
+ 
+ //9
+function fullName(fisrtName, lastName) {
+    return fisrtName + " " + lastName
+}
+const myName = fullName("Vlad", "Kalnin")
+console.log(myName)
