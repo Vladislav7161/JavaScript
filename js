@@ -75,6 +75,28 @@ console.log(newSorted(names))
  num.push(8,7,6)
  console.log(num)
  
+  //8  
+ function rearrangeArray(array) {
+     const evenNumbers = array.filter(num => num % 2 === 0);
+     const oddNumbers = array.filter(num => num % 2 !== 0);
+     const resultArray = [];
+  
+     for (let i = 0, j = 0, k = 0; i < array.length; i++) {
+       if (i % 2 === 0) {
+         resultArray[i] = evenNumbers[j];
+         j++;
+       } else {
+         resultArray[i] = oddNumbers[k];
+         k++;
+       }
+     }
+       return resultArray;
+   }
+
+   const myArray = [5, 2, 4, 7, 0, 8, 9, 10];
+ const rearrangedArray = rearrangeArray(myArray);
+ console.log(rearrangedArray);
+ 
  
  //9
 function fullName(fisrtName, lastName) {
