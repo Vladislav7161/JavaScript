@@ -69,6 +69,27 @@ function sortNames(names){
    console.log(threeDigitCount);
    console.log(fourDigitCount);
 
+//6
+function groupByType(arr) {
+    const result = {};
+  
+    for (const element of arr) {
+      const elementType = Array.isArray(element) ? 'array' : typeof element;
+  
+      if (!result[elementType]) {
+        result[elementType] = [];
+      }
+  
+      result[elementType].push(element);
+    }
+  
+    return Object.values(result);
+  }
+
+const arr = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "brown"];
+const result = groupByType(arr);
+console.log(result);
+
 
 
 //7
