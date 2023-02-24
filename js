@@ -159,3 +159,17 @@ console.log(fullName);
 console.log(fullUpperCase);
 console.log(fullLowerCase);
 ---------------------------------------------------------------------------------------------------
+
+//10
+function checkPerson(login, password) {
+    
+    const user = [
+      {login: 'user1', password: 'pass1'},
+      {login: 'user2', password: 'pass2'},
+      {login: 'user3', password: 'pass3'}
+    ];
+  
+     const users = user.find(item => item.login === login && item.password === password);
+     return users === undefined ? 'Логин или пароль не верный' : 'Успешно';
+    
+  }
