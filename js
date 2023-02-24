@@ -6,9 +6,10 @@
  const array = [5,3,4,5,6,7,3]
  const newArray = removeDuplicates(array)
  console.log(newArray)
-
+---------------------------------------------------------------------------------------
 
 //2
+
  function createArray(start, end) {
      const range = [];
   
@@ -21,10 +22,11 @@
 
  const arr = createArray(2,10)
  console.log(arr)
-
+------------------------------------------------------------------------------------------
 
 
 // 3
+
 function sortNames(names){
     const newSort = names.split(',').map(names => names.trim())
     return newSort.sort()
@@ -33,8 +35,9 @@ function sortNames(names){
  const names = "Alex,    Orysia, Misha,    Ira     , Paul";
  const sortedName = sortNames(names)
  console.log(sortNames(names))
-
+------------------------------------------------------------------------------------------
 //4
+
  const people = [
    { name: "Misha Klym", age: 2}, 
    { name: "Sam Winchester", age: 5 },  
@@ -46,9 +49,10 @@ function sortNames(names){
    return person.age >= 18
    })
    console.log(person)
-
+-------------------------------------------------------------------------------------------
 
 //5
+
  function findNumbersByLength(numbers, length) {
      let count = 0;
   
@@ -68,8 +72,9 @@ function sortNames(names){
    console.log(twoDigitCount);
    console.log(threeDigitCount);
    console.log(fourDigitCount);
-
+---------------------------------------------------------------------------------------------
 //6
+
 function groupByType(arr) {
     const result = {};
   
@@ -89,10 +94,11 @@ function groupByType(arr) {
 const arr = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "brown"];
 const result = groupByType(arr);
 console.log(result);
-
+-----------------------------------------------------------------------------------------------
 
 
 //7
+
  const num = [3,7,9]
  function addItem(){
    
@@ -100,8 +106,10 @@ console.log(result);
  num.unshift(4,3,9)
  num.push(8,7,6)
  console.log(num)
+ ----------------------------------------------------------------------------------------------
  
   //8  
+  
  function rearrangeArray(array) {
      const evenNumbers = array.filter(num => num % 2 === 0);
      const oddNumbers = array.filter(num => num % 2 !== 0);
@@ -122,11 +130,32 @@ console.log(result);
    const myArray = [5, 2, 4, 7, 0, 8, 9, 10];
  const rearrangedArray = rearrangeArray(myArray);
  console.log(rearrangedArray);
- 
+------------------------------------------------------------------------------------------------
  
  //9
-function fullName(fisrtName, lastName) {
-    return fisrtName + " " + lastName
+ 
+function formatName(firstName, lastName, format) {
+    const fullName = firstName.trim() + " " + lastName.trim()
+    return format(fullName)
 }
-const myName = fullName("Vlad", "Kalnin")
-console.log(myName)
+function toUpper(str) {
+    return str.toUpperCase();
+  }
+  
+  function toLower(str) {
+    return str.toLowerCase();
+  }
+  
+  function capitalize(str) {
+    return str.split(' ').map(item => item[0].toUpperCase() + item.slice(1).toLowerCase()).join(' ');
+}
+const firstName = "   Vlad  "
+const lastName = "  Kalnin  "
+const fullName = formatName(firstName, lastName,toLower );
+const fullUpperCase = formatName(firstName, lastName, toUpper);
+const fullLowerCase = formatName(firstName, lastName,capitalize);
+
+console.log(fullName);
+console.log(fullUpperCase);
+console.log(fullLowerCase);
+---------------------------------------------------------------------------------------------------
