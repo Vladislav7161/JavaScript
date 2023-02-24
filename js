@@ -25,9 +25,14 @@
 
 
 // 3
-const newSorted = (names) => names.replace(/\s+/g, '').split(',').sort().join(', ')
-const names = "Alex,    Orysia, Misha,    Ira     , Paul";
-console.log(newSorted(names))
+function sortNames(names){
+    const newSort = names.split(',').map(names => names.trim())
+    return newSort.sort()
+}
+ 
+ const names = "Alex,    Orysia, Misha,    Ira     , Paul";
+ const sortedName = sortNames(names)
+ console.log(sortNames(names))
 
 //4
  const people = [
