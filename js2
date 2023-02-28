@@ -1,0 +1,21 @@
+const obj = {
+  name: 'John',
+  age: 30,
+  gender: 'male',
+  occupation: 'teacher',
+  nationality: 'American'
+};
+
+function showProps(obj) {
+  const propNames = Object.getOwnPropertyNames(obj);
+  const propValues = [];
+
+  propNames.forEach(function(name) {
+    propValues.push(obj[name]);
+  });
+
+  console.log('Properties:', propNames);
+  console.log('Values:', propValues);
+}
+
+showProps(obj);
