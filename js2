@@ -1,0 +1,75 @@
+// 1 
+// const obj = {
+//   name: 'John',
+//   age: 30,
+//   gender: 'male',
+//   nationality: 'American'
+// };
+
+// function showProps(obj) {
+//   const propNames = Object.getOwnPropertyNames(obj);
+//   const propValues = [];
+
+//   propNames.forEach(function(name) {
+//     propValues.push(obj[name]);
+//   });
+
+//   console.log('Properties:', propNames);
+//   console.log('Values:', propValues);
+// }
+
+// showProps(obj);
+
+
+// 2 
+// function propsCount(currentObject) {
+//     let count = 0;
+//     for (let prop in currentObject) {
+//       if (Object.prototype.hasOwnProperty.call(currentObject, prop)) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+//   const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//  };
+//   const count = propsCount(person);
+// console.log(count);
+
+
+// 3 
+// class Person {
+//     constructor(name, surname) {
+//       this.name = name;
+//       this.surname = surname;
+//     }
+    
+//     showFullName() {
+//       console.log(`${this.name} ${this.surname}`);
+//     }
+//   }
+  
+//   class Student extends Person {
+//     constructor(name, surname, year) {
+//       super(name, surname);
+//       this.year = year;
+//     }
+    
+//     showFullName(middleName) {
+//       console.log(`${this.name} ${middleName} ${this.surname}`);
+//     }
+    
+//     showCourse() {
+//       const currentYear = new Date().getFullYear();
+//       const course = currentYear - this.year + 1;
+//       console.log(`Текущий курс ${course}`);
+//     }
+//   }
+  
+ 
+//   const student = new Student("Vladislav", "Kalnin", 2018);
+//   student.showFullName("Igorevich"); 
+//   student.showCourse()
