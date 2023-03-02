@@ -19,3 +19,21 @@ function showProps(obj) {
 }
 
 showProps(obj);
+
+// 2 
+// function propsCount(currentObject) {
+//     let count = 0;
+//     for (let prop in currentObject) {
+//       if (Object.prototype.hasOwnProperty.call(currentObject, prop)) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+//   const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//  };
+//   const count = propsCount(person);
+// console.log(count);
