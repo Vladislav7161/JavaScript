@@ -1,0 +1,131 @@
+// 1 
+// const obj = {
+//   name: 'John',
+//   age: 30,
+//   gender: 'male',
+//   nationality: 'American'
+// };
+
+// function showProps(obj) {
+//   const propNames = Object.getOwnPropertyNames(obj);
+//   const propValues = [];
+
+//   propNames.forEach(function(name) {
+//     propValues.push(obj[name]);
+//   });
+
+//   console.log('Properties:', propNames);
+//   console.log('Values:', propValues);
+// }
+
+// showProps(obj);
+
+
+// 2 
+// function propsCount(currentObject) {
+//     let count = 0;
+//     for (let prop in currentObject) {
+//       if (Object.prototype.hasOwnProperty.call(currentObject, prop)) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+//   const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//  };
+//   const count = propsCount(person);
+// console.log(count);
+
+
+// 3 
+// class Person {
+//     constructor(name, surname) {
+//       this.name = name;
+//       this.surname = surname;
+//     }
+    
+//     showFullName() {
+//       console.log(`${this.name} ${this.surname}`);
+//     }
+//   }
+  
+//   class Student extends Person {
+//     constructor(name, surname, year) {
+//       super(name, surname);
+//       this.year = year;
+//     }
+    
+//     showFullName(middleName) {
+//       console.log(`${this.name} ${middleName} ${this.surname}`);
+//     }
+    
+//     showCourse() {
+//       const currentYear = new Date().getFullYear();
+//       const course = currentYear - this.year + 1;
+//       console.log(`Текущий курс ${course}`);
+//     }
+//   }
+  
+ 
+//   const student = new Student("Vladislav", "Kalnin", 2018);
+//   student.showFullName("Igorevich"); 
+//   student.showCourse()
+
+//4 
+// class GeometricFigure {
+//     getArea() {
+//       return 0;
+//     }
+//     toString() {
+//       return Object.getPrototypeOf(this).constructor.name;
+//     }
+//   }
+  
+//   class Triangle extends GeometricFigure {
+//     constructor(base, height) {
+//       super();
+//       this.base = base;
+//       this.height = height;
+//     }
+//     getArea() {
+//       return 0.5 * this.base * this.height;
+//     }
+//   }
+  
+//   class Square extends GeometricFigure {
+//     constructor(side) {
+//       super();
+//       this.side = side;
+//     }
+//     getArea() {
+//       return this.side * this.side;
+//     }
+//   }
+  
+//   class Circle extends GeometricFigure {
+//     constructor(radius) {
+//       super();
+//       this.radius = radius;
+//     }
+//     getArea() {
+//       return Math.PI * this.radius * this.radius;
+//     }
+//   }
+  
+//   function handleFigures(figures) {
+//     const totalArea = figures.reduce((accumulator, figure) => {
+//       if (figure instanceof GeometricFigure) {
+//         console.log(`Geometric figure: ${figure.toString()} - area: ${figure.getArea()}`);
+//         return accumulator + figure.getArea();
+//       }
+//       throw new Error('Invalid figure');
+//     }, 0);
+  
+//     return totalArea;
+//   }
+  
+//   const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+//   console.log(handleFigures(figures));
